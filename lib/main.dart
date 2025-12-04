@@ -1,3 +1,4 @@
+import 'package:absolute_cinema/widgets/logo.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +11,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Absolute Cinema!'))),
+      home: Scaffold(
+        body: Center(child: Column(children: [SmallLogo(), LargeLogo()])),
+      ),
     );
   }
 }
