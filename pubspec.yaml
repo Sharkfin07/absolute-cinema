@@ -22,3 +22,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icons/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Variable.ttf
+    - family: Playwrite
+      fonts:
+        - asset: assets/fonts/Playwrite-Variable.ttf
