@@ -12,6 +12,7 @@ dependencies:
   dio: ^5.9.0
   infinite_scroll_pagination: ^5.1.1
   flutter_svg: ^2.2.3
+  flutter_dotenv: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -22,6 +23,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icons/
+    - .env
   fonts:
     - family: Inter
       fonts:
