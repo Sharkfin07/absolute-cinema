@@ -1,4 +1,6 @@
+import 'package:absolute_cinema/data/models/movie_model.dart';
 import 'package:absolute_cinema/screens/home/home_screen.dart';
+import 'package:absolute_cinema/screens/movie/movie_detail_screen.dart';
 import 'package:absolute_cinema/screens/movie/movie_list_screen.dart';
 import 'package:absolute_cinema/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -19,9 +21,33 @@ class MainApp extends StatelessWidget {
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
       themeMode: ThemeMode.system,
-      routes: {
-        '/': (context) => HomeScreen(),
-        '/movie-list': (context) => MovieListScreen(),
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case '/':
+            return MaterialPageRoute(builder: (_) => HomeScreen());
+          case '/movie-list':
+            return MaterialPageRoute(builder: (_) => MovieListScreen());
+          case '/movie-detail':
+            final movie = settings.arguments as Movie?;
+            if (movie == null) {
+              return MaterialPageRoute(
+                builder: (_) => Scaffold(
+                  appBar: AppBar(),
+                  body: const Center(child: Text('Movie not found')),
+                ),
+              );
+            }
+            return MaterialPageRoute(
+              builder: (_) => MovieDetailScreen(movie: movie),
+            );
+          default:
+            return MaterialPageRoute(
+              builder: (_) => Scaffold(
+                appBar: AppBar(),
+                body: const Center(child: Text('Route not found')),
+              ),
+            );
+        }
       },
       initialRoute: '/',
     );

@@ -17,7 +17,7 @@ class MovieItem extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(10),
         onTap: () {
-          // TODO: navigate to detail screen
+          Navigator.of(context).pushNamed('/movie-detail', arguments: movie);
         },
         child: Padding(
           padding: const EdgeInsets.all(12),
