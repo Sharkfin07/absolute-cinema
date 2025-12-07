@@ -66,9 +66,9 @@ class _MovieListScreenState extends State<MovieListScreen> {
       });
     } catch (e) {
       if (mounted) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text('Gagal memuat film: $e')));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to load absolute cinema: $e')),
+        );
       }
     } finally {
       if (mounted) {
