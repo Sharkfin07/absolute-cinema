@@ -50,7 +50,7 @@ class LargeLogo extends StatelessWidget {
         Text(
           "Absolute\nCinema",
           textAlign: TextAlign.center,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          style: TextStyle(fontFamily: "Playwrite", fontSize: 30),
         ),
       ],
     );

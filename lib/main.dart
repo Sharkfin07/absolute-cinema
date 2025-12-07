@@ -1,4 +1,5 @@
-import 'package:absolute_cinema/widgets/logo.dart';
+import 'package:absolute_cinema/screens/home/home_screen.dart';
+import 'package:absolute_cinema/screens/movie/movie_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:absolute_cinema/theme/theme.dart';
 
@@ -15,9 +16,11 @@ class MainApp extends StatelessWidget {
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
       themeMode: ThemeMode.system,
-      home: Scaffold(
-        body: Center(child: Column(children: [SmallLogo(), LargeLogo()])),
-      ),
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/movie-list': (context) => MovieListScreen(),
+      },
+      initialRoute: '/',
     );
   }
 }

@@ -86,4 +86,6 @@ class AppTheme {
       bodyMedium: TextStyle(fontSize: 14, color: colors.onSurface),
     );
   }
+
+  static TextStyle playwrite = TextStyle(fontFamily: "Playwrite");
 }
