@@ -1,7 +1,10 @@
 # Absolute Cinema: Your Absolute Movie Partner!
 
+<img width="1152" height="485" alt="image" src="https://github.com/user-attachments/assets/478c71d6-c2b3-484f-b4a8-526e93c81927" />
+
+## Are You Prepared to Witness Absolute Cinema?
 Absolute Cinema adalah aplikasi Flutter ringan untuk menjelajahi film-film populer dari **The Movie Database (TMDB)**.
-Cari, telusuri, dan lihat ringkasan film dengan antarmuka bersih dan performa cepat. Aplikasi ini menampilkan poster, sinopsis singkat, tanggal rilis, dan rating — semua didorong oleh **API TMDB.**
+Cari, telusuri, dan lihat ringkasan film dengan antarmuka bersih dan performa cepat. Aplikasi ini menampilkan poster, sinopsis singkat, tanggal rilis, dan rating.
 
 Fitur utama:
 - pemanggilan API dengan dio
