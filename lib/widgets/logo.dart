@@ -21,6 +21,7 @@ class SmallLogo extends StatelessWidget {
         Text(
           "Absolute Cinema",
           style: TextStyle(
+            fontFamily: "Playwrite",
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: logoColor,

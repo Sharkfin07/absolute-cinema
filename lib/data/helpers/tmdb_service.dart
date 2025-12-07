@@ -32,7 +32,6 @@ class TmdbService {
     try {
       return await _client.dio.get(path, queryParameters: queryParameters);
     } on DioException catch (e) {
-      // Optional: map status codes to custom exceptions.
       throw Exception('TMDB request failed: ${e.message}');
     }
   }
