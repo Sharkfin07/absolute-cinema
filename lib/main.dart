@@ -1,9 +1,12 @@
 import 'package:absolute_cinema/screens/home/home_screen.dart';
 import 'package:absolute_cinema/screens/movie/movie_list_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:absolute_cinema/theme/theme.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: '.env');
   runApp(const MainApp());
 }
 
